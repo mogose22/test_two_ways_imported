@@ -1,8 +1,8 @@
 import os
 
 def try1() -> None:
-    print(os.path.dirname(__file__))
     os.chdir("..")
+    print(os.path.dirname(__file__))
     from foo.bar.importing_module import ImportingModule
     im: ImportingModule = ImportingModule()
     print("Import with 'from foo.bar.importing_module import ImportingModule'")
@@ -11,6 +11,7 @@ def try1() -> None:
 
 def try2() -> None:
     import importlib
+    os.chdir("..")
     print(os.path.dirname(__file__))
     module = importlib.import_module("foo.bar.importing_module")
     ds_class = getattr(module, "ImportingModule")
