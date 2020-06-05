@@ -17,10 +17,6 @@ def try2() -> None:
     print("IM.foo: " + str(im.foo))
     print("IM.bar: "+ (im.bar))
 
-def try3() -> None:
-    pass
-
-
 if __name__ == '__main__':
     print('first try:')
     try1()
